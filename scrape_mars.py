@@ -33,6 +33,7 @@ def scrape():
 
     #Nasa Mars News
     browser.visit(url1)
+    time.sleep(1)
 
     # Retrieve page with the requests module
     response = browser.html

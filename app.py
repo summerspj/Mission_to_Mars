@@ -18,9 +18,8 @@ collection = db.mars_collection
 
 @app.route("/")
 def index():
-    mars_facts = db.mars_collection.find_one()
+    mars_facts = db.mars_collection.find_one(sort=[('_id', -1)])
     return render_template("index.html", listings=mars_facts)
-
 
 @app.route("/scrape")
 def scraper():
